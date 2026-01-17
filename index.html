@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Happy Birthday 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- FX layer -->
+  <div class="fx-layer" aria-hidden="true">
+    <div id="bubbles-container"></div>
+    <div id="hearts-container"></div>
+    <canvas id="confetti"></canvas>
+  </div>
+
+  <main class="app">
+    <header class="topbar">
+      <button id="toggle-fx" class="pill-btn" type="button" aria-pressed="true">
+        Hiệu ứng: Bật
+      </button>
+    </header>
+
+    <section class="wrapper">
+      <!-- LOGIN -->
+      <section id="login-screen" class="card">
+        <div class="card__header">
+           <h1 class="glow">🎀 Mở lời chúc 🎀</h1>
+          <p class="subtitle">Nhập mật khẩu để mở thiệp sinh nhật dành riêng cho bạn.</p>
+        </div>
+
+        <form id="login-form" class="form" autocomplete="off">
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <div class="input-row">
+              <input
+                type="password"
+                id="password"
+                placeholder="Nhập mật khẩu..."
+                required
+                aria-describedby="error-msg"
+                aria-invalid="false"
+              />
+              <button id="toggle-pass" class="icon-btn" type="button" aria-label="Hiện/ẩn mật khẩu">
+                👁
+              </button>
+            </div>
+
+            <!-- Live region báo lỗi để screen reader đọc khi cập nhật -->
+            <p id="error-msg" class="error-msg" role="alert" aria-atomic="true"></p>
+          </div>
+
+          <button id="login-btn" class="primary-btn" type="submit">
+            Mở quà
+          </button>
+        </form>
+
+        <p class="hint">Gợi ý: định dạng dd/mm/yyyy</p>
+      </section>
+
+      <!-- BIRTHDAY -->
+      <section id="birthday-screen" class="card hidden" aria-label="Thiệp sinh nhật">
+        <div class="card__header">
+    
+          <h1 class="hb-title">Happy Birthday</h1>
+          <h2 class="name-title">Gửi đến cô gái xinh đẹp nhất hôm nay </h2>
+        </div>
+
+        <div class="content">
+          <p class="wish-text">
+            Chúc <span>Ngọc Trâm</span> luôn <span>tươi cười</span>, <span>xinh đẹp</span>, đầy <span>may mắn</span> và mọi điều như ý trong năm tuổi mới.
+          </p>
+          <p class="wish-text">
+            Hy vọng hôm nay là một ngày thật đặc biệt, tràn ngập những khoảnh khắc ngọt ngào và hạnh phúc như chính bạn vậy 💗✨
+          </p>
+          <p class="wish-text">
+            Tuổi mới sẽ đến với nhiều điều tuyệt vời hơn, những ước mơ trở thành hiện thực và những nụ cười rạng rỡ mỗi ngày! 🌸
+          </p>
+
+          <div class="actions">
+            <button id="celebrate-btn" class="primary-btn" type="button">Nhấp nhấp vào!</button>
+            <button id="back-btn" class="ghost-btn" type="button">Quay lại</button>
+          </div>
+        </div>
+
+        <div class="signature"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
