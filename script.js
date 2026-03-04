@@ -1,5 +1,5 @@
 // ========= CONFIG =========
-const CORRECT_PASSWORD = "17/01/2006";
+const CORRECT_PASSWORD = "05/03/2006";
 
 const loginScreen = document.getElementById("login-screen");
 const birthdayScreen = document.getElementById("birthday-screen");
